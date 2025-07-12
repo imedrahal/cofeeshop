@@ -1,0 +1,28 @@
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent; /* fond sombre style LED */
+  color: #fff;
+  padding: 10px 0;
+  position: relative;
+}
+
+.banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollBanner 12s linear infinite;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  color: black;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

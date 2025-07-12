@@ -1,0 +1,98 @@
+.team-section {
+  padding: 60px 0;
+  background: #fafafa;
+  text-align: center;
+  font-family: 'Lora', serif;
+}
+
+.team-title {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+   font-family: 'Pacifico', cursive;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  max-width: 220px;
+  border-bottom: 4px solid #eee;
+}
+
+.team-img-wrapper {
+  background: linear-gradient(135deg, #f9c2d3, #d4d9ec);
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-name {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 8px;
+  color: #444;
+}
+
+.team-desc {
+  font-size: 13px;
+  color: #666;
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+.team-socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 16px;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+   will-change: transform;
+}
+
+.flickr { background: #d294e0; }
+.facebook { background: #3b5998; }
+.twitter { background: #55acee; }
+.google { background: #dd4b39; }
+
+.team-img:hover {
+  opacity: 0.8;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.team-card:hover .team-img {
+  animation: rotate 0.8s ease;
+}

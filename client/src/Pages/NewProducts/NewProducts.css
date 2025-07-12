@@ -1,0 +1,118 @@
+.product-container {
+  font-family: 'Lora', serif;
+  padding: 0px 20px;
+  background: #f8f8f8;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.related-section {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.related-grid-prod {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+}
+
+.related-card-prod {
+  flex: 0 0 auto;
+  width: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: white;
+  width: 20%;
+}
+
+
+.related-card-prod img {
+  width: 100%;
+  border-radius: 6px;
+  transition: filter 0.3s, transform 0.3s;
+}
+
+/* 🎯 Hover : toute la carte change (même l'image) */
+.related-card-prod:hover {
+  background-color: #d9d9d9; /* ou une autre couleur pastel */
+  transform: scale(1.03);
+}
+
+.related-card-prod:hover img {
+  filter: brightness(0.85) saturate(0.8); /* assombrit et désature un peu */
+  transform: scale(1.02); /* zoom léger */
+}
+
+.related-card-prod img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Responsive ajustements */
+@media (max-width: 768px) {
+  .product-container {
+    padding: 20px 10px;
+  }
+
+  .related-card-prod{
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .related-card-prod {
+    width: 130px;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}
+.related-grid-prod {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  /* Masquer la scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.related-grid-prod::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+.img{
+    height:80%;;
+}

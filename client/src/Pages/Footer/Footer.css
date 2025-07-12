@@ -1,0 +1,274 @@
+/* Reset et basiques */
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+    background-color: #ffcde5 !important;
+  background: #f8fafc;
+  color: #4a4a4a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px 20px;
+  position: relative;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Colonnes */
+.footer-column {
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+.footer-about .footer-logo {
+  font-weight: 900;
+  font-size: 28px;
+  color: #0b0b23;
+  margin-bottom: 12px;
+  user-select: none;
+  display: inline-block;
+}
+
+/* Personnalisation du logo LAB */
+.logo-lab {
+  position: relative;
+  color: #0b0b23;
+}
+.logo-lab b {
+  font-weight: 900;
+  font-size: 34px;
+  vertical-align: super;
+}
+
+/* Texte descriptif */
+.footer-about p {
+  font-weight: 400;
+  line-height: 1.5;
+  color: #767676;
+  margin-bottom: 24px;
+  max-width: 260px;
+}
+
+/* Formulaire inscription mail */
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #c4c4c4;
+  outline: none;
+  background: transparent;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.footer-input::placeholder {
+  color: #aaa;
+}
+
+.footer-input:focus {
+  border-color: #0077ff;
+}
+
+.footer-submit {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer-submit:hover {
+  color: #0077ff;
+}
+
+/* Checkbox privacy */
+.footer-checkbox-label {
+  font-size: 12px;
+  color: #777;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Best Sellers */
+.footer-bestsellers h4,
+.footer-links h4,
+.footer-socials h4 {
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #0b0b23;
+}
+
+.footer-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.footer-product img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.05);
+}
+
+.footer-product strong {
+  font-weight: 700;
+  color: #454545;
+}
+
+.footer-product p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #999;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links ul li a:hover {
+  color: #0077ff;
+}
+
+/* Socials */
+.footer-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.social-icon:hover {
+  background: #0077ff;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #1a1a2e;
+  border: none;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.3);
+  transition: background-color 0.3s ease;
+  user-select: none;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: #0077ff;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px 15px;
+    font-size: 13px;
+  }
+
+  .footer-input {
+    font-size: 13px;
+  }
+
+  .footer-submit {
+    font-size: 20px;
+  }
+
+  .footer-product img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+}

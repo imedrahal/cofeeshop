@@ -1,0 +1,60 @@
+.health-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 500px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.health-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 20px;
+  min-height: 100%;
+}
+
+.health-card.large {
+  grid-row: span 2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* fonce l’image */
+  z-index: 1;
+}
+
+.text {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .health-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .health-card {
+    height: 200px;
+    font-size: 1rem;
+  }
+
+  .health-card.large {
+    height: 300px;
+  }
+}
